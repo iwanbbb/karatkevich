@@ -2,6 +2,7 @@
     --black: #353535;
 	--accend: #b85bb6;
 	--white: #fff9f9;
+    --grey: #f0f0f0;
 
     --font-family: "Montserrat", sans-serif;
     --second-family: "Misto", sans-serif;
@@ -19,6 +20,7 @@ body {
     background: var(--white);
     color: var(--black);
 }
+
 
 .container {
     max-width: 1325px;
@@ -69,6 +71,12 @@ body {
     width: 385px;
     height: 430px;
     background: var(--black);
+    transition: var(--transition);
+}
+
+.hero__item:hover {
+    scale: 1.02;
+    transform: translateY(-5px);
 }
 
 .hero__item:last-child {
@@ -94,3 +102,90 @@ body {
 }
 
 /**--bio--**/
+
+.bio {
+    padding: 40px 0;
+    height: 100vh;
+}
+
+.bio__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 114%;
+    letter-spacing: 0.01em;
+    color: var(--accend);
+    margin-bottom: 125px;
+
+    span {
+        font-weight: 400;
+        color: var(--black);
+    }
+}
+
+.bio__img-bg {
+    position: relative;
+    width: 431px;
+    height: 644px;
+    background: var(--accend);
+}
+
+.bio__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bio__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 30px;
+}
+
+.accordion__plus {
+    transition: var(--transition);
+}
+
+.accordion__header.active {
+    .accordion__plus {
+        transform: rotate(45deg);
+    }
+}
+
+.accordion__content {
+    padding: 0 30px;
+    font-size: 14px;
+    max-height: 0;
+    max-width: 655px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.accordion {
+    width: 730px;
+    background: var(--grey);
+    transition: var(--transition);
+}
+
+.accordion:hover {
+    background: #e2e2e2;
+}
+
+.accordion__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 117%;
+    letter-spacing: -0.03em;
+    color: var(--black);
+}
