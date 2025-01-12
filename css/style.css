@@ -243,27 +243,41 @@ body {
 
 /**--photos--**/
 
-.photos__inner {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto) ;
-    gap: 35px;
-    grid-auto-flow: row dense;
+.photos {
+    height: 100vh;
+    padding: 40px 0;
 }
 
-.photo-1 {
-    grid-row: span 3;
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--accend);
 }
 
-.photo-4 {
-    grid-column: 2;
-    grid-column: span 2;
+.swiper-pagination {
+    position: unset;
+    margin-top: 15px;
 }
 
-.photo-2 {
-    grid-row: span 2;
-}
+/**--awards--**/
 
-.photo-5 {
-    grid-column: 2;
-}

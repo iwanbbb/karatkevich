@@ -6,6 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Karatkevich</title>
@@ -19,7 +23,7 @@
                     <li class="nav__item"><button class="nav__link" data-tp="bio">Бiяграфiя</button></li>
                     <li class="nav__item"><button class="nav__link" data-tp="tvr">Творы</button></li>
                     <li class="nav__item"><button class="nav__link" data-tp="pht">Фотаздымкi</button></li>
-                    <li class="nav__item"><button class="nav__link">Узнагароды</button></li>
+                    <li class="nav__item"><button class="nav__link" data-tp="awa">Узнагароды</button></li>
                 </ul>
             </nav>
 
@@ -134,21 +138,52 @@
     <section class="photos" id="pht">
         <div class="container">
             <h1 class="photos__title section__title">Фотаздымкi<br><span>Уладзiмiра Караткевiча</span></h1>
-            <div class="photos__inner">
-                <img class="photo-1" src="./images/photos/1.jpg" alt="photo">
-                <img class="photo-2" src="./images/photos/2.jpg" alt="photo">
-                <img class="photo-3" src="./images/photos/3.jpg" alt="photo">
-                <img class="photo-4" src="./images/photos/4.jpg" alt="photo">
-                <img class="photo-5" src="./images/photos/5.jpg" alt="photo">
-            </div> 
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./images/photos/1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/photos/2.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/photos/3.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/photos/4.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/photos/5.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/photos/6.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/photos/7.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/photos/8.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./images/photos/9.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+                </div>
+            </div>
+            
         </div>
         
     </section>
 
+    <section class="awards" id="awa">
+        <div class="container">
+            <h1 class="awards__title section__title">Узнагароды<br><span>Уладзiмiра Караткевiча</span></h1>
+
+            <div class="awards__inner">
+                
+            </div>
+        </div>
+    </section>
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Initialize Swiper -->
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
     <script src="./javascript/accordion.js"></script>
     <script src="./javascript/teleport.js"></script>
 </body>
